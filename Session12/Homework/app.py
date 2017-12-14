@@ -49,7 +49,7 @@ def add_item():
         new_item = Item(title=title, image=image, description=description, price=price)
         new_item.save() # Save into database
 
-        return "OKe anh"
+        return "New item added successfully"
 
 @app.route('/admin')
 def admin():
