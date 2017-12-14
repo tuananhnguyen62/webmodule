@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+<div class="container">
+    <div class="pt-4 mt-4">
+      <h3>Be carefully! Are you sure to delete {{ item.title }}?</h3>
+      <form class="" method="post">
+        <button class="btn btn-danger btn-lg" type="submit" name="button">
+          Yes
+        </button>
+        <button class="btn btn-dark btn-lg" type="button" name="button">
+          <a class="text-non-decor text-white" href="/admin">No</a>
+        </button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

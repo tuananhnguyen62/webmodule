@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+  <div class="container">
+    <form class=""  method="post">
+      <input type="text" name="title" value="{{ item.title }}" class="form-control" placeholder="Tên">
+      <textarea placeholder="description" name="description" rows="4" cols="60">{{ item.description }}</textarea>
+      <input type="text" name="image" value="{{ item.image }}" class="form-control" placeholder="Link">
+      <input type="int" name="price" value="{{ item.price }}" class="form-control" placeholder="Giá">
+
+      {% for message in get_flashed_messages() %}
+      <p>{{ message }}</p>
+      {% endfor %}
+
+      <input type="submit" class="btn btn-primary" name="" value="Sửa">
+    </form>
+  </div>
+
+{% endblock %}
